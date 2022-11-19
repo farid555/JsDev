@@ -47,15 +47,54 @@ console.log(sportsStore[1][1][0]);
 
 //*********************************** *//
 
-var a = 17;
-let b = 37;
-const x = 13;
+// **global scope**//
 
-{
-  console.log(x);
-}
- 
-function add(){
+//**var x = 1; // **2015**//
 
-  
+//*const z = 13;
+
+// **local scope**//
+
+function myFun() {
+  const z = 5;
+  console.log(z);
+
+  // **local scope**//
+
+  {
+    let y = 55;
+    console.log(y);
+  }
 }
+myFun();
+
+//*********************************** *//
+
+//**Global scope */
+
+var x = 1;
+let y = 2;
+const z = 3;
+
+console.log(`global: ${x}`);
+console.log(`global: ${y}`);
+console.log(`global: ${z}`);
+
+function myfunc() {
+  var x = 10;
+  const z = 5;
+
+  {
+    var x = 11; //**var is  function scoped */
+    const z = 6; //**const is  block scoped */
+    console.log(`block: ${x}`);
+    console.log(`block: ${y}`);
+    console.log(`block: ${z}`);
+  }
+
+  console.log(`function: ${x}`);
+  console.log(`function: ${y}`);
+  console.log(`function: ${z}`);
+}
+
+myfunc();
