@@ -45,5 +45,17 @@ const sportsStore = [equipDept, clothDept];
 console.log(sportsStore[0][1][2]);
 console.log(sportsStore[1][1][0]);
 
-
 //*********************************** *//
+
+var a = 17;
+let b = 37;
+const x = 13;
+
+{
+  console.log(x);
+}
+ 
+function add(){
+
+  
+}
