@@ -230,3 +230,5 @@ myPizza.setToppings("tomat");
 myPizza.setToppings("olives");
 console.log(myPizza.getCrust());
 console.log(myPizza.getToppings());
+
+

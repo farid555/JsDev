@@ -44,13 +44,32 @@ console.log(evenDivs[0].nextElementSibling);
 console.log(evenDivs[0].previousElementSibling);
 console.log(evenDivs[0].previousSibling);
 
-/*view2.style.display = "none";
-view2.style.display = "flex";
-view2.style.flexDirection = "row";
-view2.style.flexWrap = "wrap";
-view2.style.margin = "10px";
+//**WEB Stroage API/ Local sessionStorage */
 
-while (view2.lastChild) {
-  view2.lastChild.remove();
-}
-*/ 
+const myArrayOfPc = ["Mac", "Windows", "Resberry-Pi"];
+
+const myObjects = {
+  name: "Mohammad",
+  hobbies: ["Code", "Sleep", "Eat"],
+  logName: function () {
+    console.log(this.name);
+  },
+};
+
+//***Object */
+
+sessionStorage.setItem("UserInfo", JSON.stringify(myObjects));
+var sessionData = JSON.parse(sessionStorage.getItem("UserInfo"));
+console.log(sessionData);
+
+//***Array */
+
+sessionStorage.setItem("UserInfo", JSON.stringify(myArrayOfPc));
+var sessionDataArray = JSON.parse(sessionStorage.getItem("UserInfo"));
+console.log(sessionDataArray);
+
+//**localStorage */
+
+localStorage.setItem("UserInfo", JSON.stringify(myArrayOfPc));
+var localDataArray = JSON.parse(localStorage.getItem("UserInfo"));
+console.log(localDataArray);
