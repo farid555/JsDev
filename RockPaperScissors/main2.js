@@ -71,5 +71,10 @@ console.log(sessionDataArray);
 //**localStorage */
 
 localStorage.setItem("UserInfo", JSON.stringify(myArrayOfPc));
+//**localStroage.clear() */
+const key = localStorage.key(0);
+const len = localStorage.length;
 var localDataArray = JSON.parse(localStorage.getItem("UserInfo"));
-console.log(localDataArray);
+
+console.log(key);
+console.log(len);
