@@ -190,3 +190,43 @@ function sings({ vocals }) {
   return `${vocals} sings!`;
 }
 console.log(sings(band));
+
+//******************Javascript classes***********/
+
+class Pizza {
+  constructor(pizzaType, pizzaSize) {
+    this.type = pizzaType;
+    this.size = pizzaSize;
+    this.crust = "orginal";
+    this.toppings = [];
+  }
+
+  getCrust() {
+    return this.crust;
+  }
+  getToppings() {
+    return this.toppings;
+  }
+
+  setToppings(toppings) {
+    this.toppings.push(toppings);
+  }
+
+  setCrust(pizzaCrust) {
+    this.crust = pizzaCrust;
+  }
+
+  bake() {
+    console.log(
+      `Baking a ${this.size} ${this.type}  ${this.crust} crust pizza.`,
+    );
+  }
+}
+
+const myPizza = new Pizza("chicken", "small");
+myPizza.setCrust("thin");
+myPizza.bake();
+myPizza.setToppings("tomat");
+myPizza.setToppings("olives");
+console.log(myPizza.getCrust());
+console.log(myPizza.getToppings());
